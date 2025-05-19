@@ -1,3 +1,5 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css");
+
 body {
   margin: 0;
   font-family: Arial, sans-serif;
@@ -85,28 +87,83 @@ body {
 .footer {
   background-color: #333;
   color: white;
-  text-align: center;
-  padding: 1rem;
+  padding: 2rem 1rem;
 }
 
-/* Responsive: two cards per row on medium screens */
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-copy {
+  flex: 1;
+  text-align: left;
+  margin: 0;
+}
+
+.footer-info {
+  flex: 1;
+  text-align: center;
+  margin: 0;
+}
+
+.footer-info p {
+  margin: 0.5rem 0;
+}
+
+.footer-info a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.footer-icons {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+
+.footer-icons a {
+  color: white;
+  font-size: 1.25rem;
+  transition: color 0.3s;
+}
+
+.footer-icons a:hover {
+  color: #ccc;
+}
+
 @media (max-width: 900px) {
   .card {
     flex: 0 0 calc(50% - 1rem);
   }
 }
 
-/* One card per row on small screens */
 @media (max-width: 600px) {
   .card {
     flex: 0 0 100%;
   }
   .navbar {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
   }
   .navbar-links {
     width: 100%;
     justify-content: space-around;
+  }
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+  }
+  .footer-copy,
+  .footer-info,
+  .footer-icons {
+    flex: none;
   }
 }
